@@ -1,0 +1,204 @@
+    body {
+        font-family: "Roboto";
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+    }
+    /*Start Styling the Range */
+    
+    p {
+        font-size: 13px;
+        font-weight: bold;
+        padding: 0;
+        padding-top: 12px;
+    }
+    
+    .form {
+        background-color: rgb(245, 245, 245);
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 20px;
+        height: 60px;
+        width: 350px;
+        padding: 0;
+        color: #000000;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    
+    input[type=range] {
+        margin: 0;
+        width: 250px;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+        font-size: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #time {
+        margin: auto;
+        color: rgb(0, 0, 0);
+        -webkit-appearance: none;
+        width: 320px;
+        height: 5px;
+        background: #6c54f7;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #time::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #000000;
+        cursor: pointer;
+    }
+    
+    #time::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #000000;
+        cursor: pointer;
+    }
+    /*END Styling the Range */
+    /*Start Styling the table outer container*/
+    
+    .outer-container {
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    /*END Styling the table outer container */
+    /*Start Styling the table */
+    
+    table {
+        border-collapse: collapse;
+        margin: auto;
+    }
+    
+    .set-time {
+        font-weight: bold;
+    }
+    
+    table td,
+    th {
+        padding: 15px;
+    }
+    
+    table thead th {
+        background-color: #54585d;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid #54585d;
+    }
+    
+    table tbody td {
+        color: #636363;
+        border: 1px solid #dddfe1;
+    }
+    
+    table tbody tr {
+        background-color: #f9fafb;
+    }
+    
+    .Available {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .Available:hover {
+        color: #9b9b9b;
+        font-weight: bolder;
+        border: 2px solid #dddfe1;
+        cursor: pointer;
+    }
+    
+    .Unavailable {
+        background-color: rgb(189, 189, 189);
+    }
+    
+    .Full {
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    /*END Styling the table */
+    /*Start Mobile device styling */
+    
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+        .set-time {
+            font-weight: bold;
+            background-color: #54585d;
+            color: rgb(255, 255, 255);
+        }
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            margin: 0 0 18px 0;
+        }
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 0;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+        td:nth-of-type(1):before {
+            content: "";
+        }
+        td:nth-of-type(2):before {
+            content: "Wednesday 18th";
+        }
+        td:nth-of-type(3):before {
+            content: "Thursday 19th";
+        }
+        td:nth-of-type(4):before {
+            content: "Friday 20th";
+        }
+        td:nth-of-type(5):before {
+            content: "Saturday 21st";
+        }
+        td:nth-of-type(6):before {
+            content: "Monday 23rd";
+        }
+        td:nth-of-type(7):before {
+            content: "Tuesday 24th";
+        }
+    }
+    /*END Mobile device styling */

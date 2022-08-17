@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Check Availabilty</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+</head>
+
+<body>
+
+    <!---Form to take in values-->
+    <div class="outer-container">
+        <div class="form" id="availabilty">
+            <p for="time"><span id="hour-selected"></span> HR/s</p>
+            <input type="range" id="time" min="1" max="5" value="0" onchange="selectHours()">
+        </div>
+
+
+        <table id="table2" class="inner-container">
+            <!---Calendar Timetable Slot data -->
+        </table>
+    </div>
+
+
+</body>
+
+<script>
+    var slider = document.getElementById("time");
+    var output = document.getElementById("hour-selected");
+    output.innerHTML = slider.value;
+
+
+
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+
+    //Function to set the background of the available to green 
+    function setBacks() {
+
+        document.getElementById(this.id).style.backgroundColor = "green";
+        document.getElementById(this.id).style.color = "black";
+        document.getElementById(this.id).innerText = "Selected";
+
+
+    }
+</script>
+
+</html>
